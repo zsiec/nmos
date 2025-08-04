@@ -1,0 +1,79 @@
+.xy-panel-container {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.xy-destination-panel {
+  flex: 0 0 40%;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.xy-source-panel {
+  flex: 1;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.xy-destination-button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.xy-destination-button:hover {
+  transform: translateY(-2px);
+}
+
+.xy-destination-button.selected {
+  border: 2px solid #2196f3;
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+.xy-destination-button.locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.xy-source-button {
+  min-width: 120px;
+  text-transform: none;
+  justify-content: flex-start;
+}
+
+.xy-no-destination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .xy-panel-container {
+    flex-direction: column;
+  }
+  
+  .xy-destination-panel {
+    flex: none;
+    max-height: 40vh;
+  }
+  
+  .xy-source-panel {
+    flex: 1;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .xy-destination-button.selected {
+    background-color: rgba(33, 150, 243, 0.15);
+  }
+  
+  .xy-no-destination {
+    border-color: #424242;
+  }
+}

@@ -1,0 +1,1 @@
+export { SalvoManager } from './SalvoManager';

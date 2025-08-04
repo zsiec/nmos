@@ -1,0 +1,39 @@
+.preset-manager {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.preset-manager > div {
+  height: 100%;
+  overflow: auto;
+}
+
+.preset-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.preset-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preset-card .MuiCardContent-root {
+  flex: 1;
+}
+
+.preset-card .MuiCardActions-root {
+  padding: 16px;
+  justify-content: space-between;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .preset-card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+}
